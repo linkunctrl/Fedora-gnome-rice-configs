@@ -1,0 +1,653 @@
+/*  ------------------------------------------- *
+*    CYBER DUSK - ROUNDED GLASS (RED EDITION)   *
+*    LINK : www.gnome-look.org/p/2357650        *
+*    Author : shant-O                            *
+*    Version : 6.1                              *
+*    Release Date : September 1st, 2026         *
+*    This file Themes the Gnome Shell           *
+*   ------------------------------------------- */
+stage {
+    -st-accent-color: rgba(255, 51, 85, 0.5);   
+    -st-accent-bg-color: rgba(66, 13, 25, 1);   
+    -st-accent-fg-color: white;   
+}
+#stage {
+    background-color: transparent !important;
+}
+.activities-overview,
+#overview {
+    background-color: rgba(30, 10, 15, 0.4);
+}
+
+/* =====================================
+              PILL MAGICK
+===================================== */
+#panel .panel-button {
+    margin-right: 4px;
+    background-color: rgba(50, 20, 25, 1) !important;
+    border-radius: 99px;              
+    border: 2px solid rgba(255, 51, 85, 0.5) !important;
+}
+#panel .panel-button:hover,
+#panel .date-menu-button:hover {
+    box-shadow: inset 0 0 10px rgba(255, 51, 85, 0.8),
+                0 0 12px rgba(255, 51, 85, 0.7);
+}
+#panel .panel-button:active,
+#panel .date-menu-button:active {        
+    border: 2px solid rgba(255, 51, 85, 0.9) !important;  
+    box-shadow: inset 0 0 10px rgba(255, 51, 85, 0.8),
+                0 0 12px rgba(255, 51, 85, 0.7) !important;
+}
+/* =====================================
+                  PANEL
+===================================== */
+#panel .panel-button,
+#panel .panel-status-button,
+#panel .clock-display,
+#panel .date-menu-button {
+    margin-bottom: 2px;
+    height: 30px;
+    max-height: 30px;
+    padding: 0 0 0 0;
+}
+#panel {
+    padding-bottom: 2px;
+    height: 30px;
+    background-color: rgba(30, 10, 15, 0.6);
+    border-radius: 0px;
+    max-height: 30px;
+    padding: 0 0 0 0;
+}
+#panelBox {
+    padding: 0 0 0 0;
+    margin: 0px;
+}
+#panel StIcon {
+    margin: 2px;
+    vertical-align: middle;
+}
+#panel StIcon,
+#panel .system-status-icon {
+    icon-size: 18px;
+    padding: 0 0 0 0;
+    margin: 0px 2px;
+    vertical-align: middle;
+}
+/* =============================================
+   6. GLOBAL POPUP MENUS & SELECTION MARKERS
+  ============================================= */
+
+.datemenu-menu,
+.quick-settings,
+.popup-menu-content {
+    background-color: rgba(45, 10, 20, 0.85);
+    border: 2px solid rgba(255, 51, 85, 0.7);
+    color: rgba(255, 255, 255, 1.0);   
+    margin: 2px;   
+    padding: 12px;   
+    border-radius: 30px;   
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.6);
+}
+.menu,
+.sub-menu,
+.popup-sub-menu {
+    background-color: rgba(50, 10, 20, 0.9);
+    border: 2px solid rgba(255, 51, 85, 0.5);
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.popup-menu,
+.popup-menu-boxpointer,
+.menu,
+.popup-menu-item:active,
+.popup-menu-item:checked,
+.popup-menu-item:focus,
+.popup-menu-item:hover,
+.popup-menu-item.selected,
+.popup-sub-menu {
+    border-radius: 30px;   
+}
+.sub-menu StButton,
+.popup-sub-menu StButton {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;   
+  color: rgba(255, 255, 255, 1.0);   
+}
+.popup-menu-section {
+  background-color: transparent;   
+}
+.sub-menu .popup-menu-item:hover {  
+  border-radius: 30px;    
+}
+.popup-menu-item StButton.button,
+.popup-menu-item .button,
+.vitals-menu-action-button {
+    color: rgba(255, 255, 255, 1.0);   
+    box-shadow: inset 0 0 6px 12px rgba(255, 51, 85, 0.2);
+}
+.popup-menu-item StButton.button:hover,
+.vitals-menu-action-button:hover {
+    box-shadow: inset 0 0 6px 12px rgba(255, 51, 85, 0.7);
+}
+.popup-menu-item StButton.button:checked,
+.vitals-menu-action-button:checked {
+    background-color: rgba(35, 5, 15, 0.85);
+    color: rgba(255, 255, 255, 1.0);
+    border: 2px solid rgba(255, 51, 85, 0.5); 
+    border-radius: 30px; 
+    box-shadow: inset 0px 0px 8px 12px rgba(255, 51, 85, 0.3);
+}
+.popup-menu-item:active,
+.popup-menu-item:checked,
+.popup-sub-menu .popup-menu-item:checked {
+    background-color: rgba(35, 5, 15, 0.85);
+    color: rgba(255, 255, 255, 1.0);
+    border: 2px solid rgba(255, 51, 85, 0.5); 
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 8px 0px rgba(255, 51, 85, 0.3);
+}
+.popup-menu-item:checked .popup-menu-ornament {
+    color: rgba(255, 51, 85, 0.8);
+}
+.message-list-section StButton,
+.message-list-section StButton.button,
+.message-list-section .button {
+    background-color: rgba(35, 5, 15, 0.8);
+    border: 0px solid rgba(255, 51, 85, 0.2);
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: none;
+}
+.message-list-section StButton.button:hover,
+.message-list-section .button:hover,
+.message-list-section StButton.button:focus,
+.message-list-section .button:focus {
+    background-color: rgba(255, 51, 85, 0.2); 
+    border-color: rgba(255, 51, 85, 0.6);
+    color: rgba(255, 255, 255, 1.0);
+}
+.datemenu-displays-box .message,
+.datemenu-displays-box .world-clocks-button,
+.datemenu-displays-box .weather-button,
+.datemenu-displays-box StButton {
+    background-color: rgba(35, 5, 15, 0.8);
+    border: 0px solid rgba(255, 51, 85, 0.2);
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: none;
+}
+.datemenu-displays-box .message:hover,
+.datemenu-displays-box .world-clocks-button:hover,
+.datemenu-displays-box .weather-button:hover,
+.datemenu-displays-box StButton:hover {
+    background-color: rgba(35, 5, 15, 0.8);
+    border-color: rgba(255, 51, 85, 0.6);
+}
+.datemenu-displays-box,
+.datemenu-displays-section {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+.message-list-clear-button {
+    background-color: rgba(70, 15, 30, 0.7);
+    color: rgba(255, 235, 240, 0.5);
+    border: 1px solid rgba(255, 51, 85, 0.3);
+    border-radius: 30px; 
+    box-shadow: none;
+    transition: all 200ms ease;
+}
+.message-list-clear-button:focus {
+    background-color: rgba(70, 15, 30, 0.9);
+    color: rgba(255, 235, 240, 0.7);
+    border: 1px solid rgba(255, 51, 85, 0.5);
+    border-radius: 30px; 
+    box-shadow: none;
+    transition: all 200ms ease;
+}
+.message-list-clear-button:focus:hover,
+.message-list-clear-button:hover {
+    background-color: rgba(70, 15, 30, 0.9);
+    color: rgba(255, 255, 255, 1.0);
+    border: 2px solid rgba(255, 51, 85, 0.7);
+    border-radius: 30px; 
+    box-shadow: none;
+    transition: all 200ms ease;
+}
+/* =====================================
+               POLKIT
+===================================== */
+.user-avatar {
+    width: 200px;   
+    height: 200px;   
+    border-radius: 60px;   
+    border: 2px solid rgba(255, 255, 255, 0.2);   
+    margin: 10px auto; 
+    icon-size: 200px;
+}
+.user-icon {
+  background-size: contain;
+  color: rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+  icon-size: 200px;
+  color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  background: transparent;        
+}
+.user-icon StIcon {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 60px;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+}
+.user-icon:hover {
+  color: white;   
+}
+.user-icon.user-avatar {
+  border: 2px rgba(255, 84, 114, 0.3);
+}
+.modal-dialog .user-avatar {
+    width: 200px;   
+    height: 200px;   
+    border-radius: 60px;   
+    border: 2px solid rgba(255, 255, 255, 0.2);   
+    margin: 10px auto; 
+    icon-size: 200px;
+}
+.user-widget.vertical .user-icon {
+  icon-size: 200px;
+}
+.user-widget.vertical .user-icon StIcon {
+  padding: 20px;
+  padding-top: 18px;
+  padding-bottom: 22px;
+  width: 88px;
+  height: 88px;
+}
+.modal-dialog {
+    width: 320px;   
+    background-color: rgba(35, 5, 15, 0.85);   
+    border-radius: 30px;   
+    border: 1px solid rgba(255, 51, 85, 0.4);   
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);   
+}
+.prompt-dialog-main-layout {
+    spacing: 12px; 
+    padding: 20px;
+}
+.prompt-dialog-password-entry {
+    color: #ff3355 !important;
+    width: 240px !important;
+    background-color: rgba(255, 51, 85, 0.1) !important;
+    border-image: none !important;
+    border: 1px solid rgba(255, 51, 85, 0.4) !important;
+    padding: 6px 12px !important;
+    border-radius: 24px !important;
+    box-shadow: none !important;
+}
+.modal-dialog-button-box {
+    spacing: 10px;
+    padding-top: 10px;
+}
+.modal-dialog-button {
+    border-radius: 30px;
+}
+.user-widget {
+    background-color: transparent;
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+.user-widget:hover, .user-widget:focus, .user-widget:checked {
+    background-color: transparent;
+    background: none;
+}
+
+/* BUTTON SHENANIGANS */
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:first-child:hover,
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:first-child:focus {
+    background-image: none;
+    background-color: rgba(204, 51, 80, 0.2);
+}
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:first-child:focus:hover {
+    background-color: rgba(102, 0, 30, 0.2);
+}
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:last-child {
+    background-image: none;
+    background-color: rgba(204, 0, 50, 1);
+}
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:default,
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:last-child:focus {
+    background-image: none;
+    background-color: rgba(120, 0, 30, 0.3);
+}
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:last-child:hover {
+    background-image: none;
+    background-color: rgba(255, 51, 85, 1); 
+}
+.prompt-dialog .modal-dialog-button-box .modal-dialog-button:last-child:focus:hover {
+    background-color: rgba(180, 40, 70, 1);
+}
+
+/* =====================================
+              CALENDAR
+===================================== */
+.calendar-day-base:hover,
+.calendar-day-base:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.calendar-day-base,
+.calendar-day {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 13px; 
+  border: 1px solid transparent;
+}
+.calendar-day-base:hover,
+.calendar-day:hover,
+.calendar-day-base:focus,
+.calendar-day:focus {
+    background-color: rgba(35, 5, 15, 0.855); 
+    color: rgba(255, 255, 255, 1.0); 
+    box-shadow: inset 0px 0px 15px 0px rgba(255, 51, 85, 0.5);
+}
+.calendar-today {
+  background-color: rgba(255, 51, 85, 0.6);
+  color: rgba(255, 255, 255, 1.0);
+  font-weight: bold;
+  border: 2px solid rgba(255, 51, 85, 0.8);
+  border-radius: 13px; 
+}
+.calendar-other-month-day {
+  background-color: transparent;
+  opacity: 0.3;
+}
+.calendar-month-label {
+  color: rgba(255, 255, 255, 1.0);
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 24px; 
+  padding: 8px 8px;
+}
+.calendar-change-month-back,
+.calendar-change-month-forward {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 1.0);
+  border-radius: 24px; 
+  padding: 0px;
+  margin: 0 0px;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.calendar-change-month-back:hover,
+.calendar-change-month-forward:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.calendar-day-heading {
+  color: rgba(255, 51, 85, 0.9); 
+  font-weight: bold;
+  font-size: 1.0em;
+  padding-bottom: 8px;
+  padding-top: 12px;
+  background-color: transparent;
+}
+/* =====================================
+            QUICK SETTINGS
+===================================== */
+.quick-settings-system-item StBoxLayout > StButton {
+    background: rgba(200, 30, 60, 0.5);
+    border-radius: 16px;
+}
+.quick-settings-system-item StBoxLayout > StButton:hover {
+    background: rgba(240, 40, 80, 0.8);
+}
+.quick-settings-user-box StButton.icon-button:first-child,
+.quick-settings .quick-settings-system-item StButton:first-child {
+    background: rgba(200, 40, 80, 1);
+    border-radius: 24px;
+    color: white;
+}
+.quick-settings-user-box StButton.icon-button:last-child,
+.quick-settings .quick-settings-system-item StButton:last-child {
+    background-color: #e01b24;
+    color: #ffffff;
+    border-color: #a51d2d;
+    background-image: none; 
+    border-radius: 30px;
+}
+.quick-settings-user-box StButton.icon-button:last-child:hover,
+.quick-settings .quick-settings-system-item StButton:last-child:hover {
+    background-color: #f66151; 
+}
+.quick-settings, 
+.datemenu-menu, 
+.popup-menu-content,
+.popup-menu-item,
+.message-list,
+.calendar,
+.quick-toggle,
+.quick-settings-tile {
+    color: rgba(255, 255, 255, 1.0);    
+}
+.slider {
+    -bar-level-active-background-color: rgba(255, 51, 85, 0.9);
+    -bar-level-background-color: rgba(255, 255, 255, 0.1);
+}
+.slider-handle {
+    background-color: rgba(255, 255, 255, 1.0);
+    border: 2px solid rgba(255, 51, 85, 0.5);
+    border-radius: 30px; 
+}
+.quick-toggle-menu {
+    background-color: rgba(50, 10, 20, 0.9);
+    border: 2px solid rgba(255, 51, 85, 0.5);
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+}
+.quick-toggle-menu .popup-menu-item:focus, 
+.quick-toggle-menu .popup-menu-item:hover {
+    background-color: rgba(35, 5, 15, 0.85);
+    border: 2px solid rgba(255, 51, 85, 0.5);
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+}
+.quick-settings StIcon,
+.popup-menu-item StIcon,
+.message StIcon,
+.quick-toggle StIcon,
+.quick-toggle-menu-button StIcon {
+    color: rgba(255, 255, 255, 1.0); 
+    -st-icon-style: symbolic;   
+}
+.quick-settings .icon-button {
+    background-color: rgba(50, 10, 20, 0.9);
+    color: rgba(255, 255, 255, 1.0);    
+    border: none;
+    box-shadow: inset 0 0 12px rgba(255, 51, 85, 0.3);
+}
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+    background-color: rgba(35, 5, 15, 0.85);
+    border: 2px solid rgba(255, 51, 85, 0.5);
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+}
+.quick-toggle {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.quick-toggle:checked,
+.quick-toggle-menu-button:checked {
+    background-color: rgba(50, 10, 20, 0.9);
+    border: 2px solid rgba(255, 51, 85, 0.5);
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+}
+.quick-toggle-separator {
+    background-color: transparent;   
+    width: 0px;   
+    margin: 0;   
+    padding: 0;   
+    border: none;   
+}
+.quick-toggle:hover, 
+.quick-settings-tile:hover,
+.quick-toggle-menu-button:hover {
+    background-color: rgba(35, 5, 15, 0.855);    
+    color: rgba(255, 255, 255, 1.0);    
+    border: 2px solid rgba(255, 51, 85, 0.5);   
+    box-shadow: inset 0px 0px 15px 0px rgba(255, 51, 85, 0.5);
+}
+.quick-settings .icon-button:hover,
+.quick-settings-system-menu StButton:hover {
+  background-color: rgba(255, 51, 85, 0.3);   
+}
+.quick-toggle-menu .popup-menu-item,
+.quick-toggle-menu .popup-menu-item StLabel,
+.quick-settings-menu .popup-menu-item .clutter-text,
+.quick-settings-menu .popup-menu-item label {
+    color: rgba(255, 255, 255, 1.0);   
+}
+.quick-slider .slider,
+.slider {
+    height: 24px;   
+    -barlevel-height: 24px;   
+    -barlevel-background-color: rgba(255, 51, 85, 0.1);
+    -barlevel-active-background-color: rgba(200, 30, 60, 0.7);
+    color: rgba(255, 51, 85, 1);   
+    -slider-handle-radius: 6px;   
+}
+/* =====================================
+            TOGGLE SWITCH
+===================================== */
+.toggle-switch {
+    width: 40px; 
+    height: 24px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    background-image: url("assets/toggle-off.png");
+}
+.toggle-switch:checked {
+    background-image: url("assets/toggle-on.png");
+    box-shadow: none;
+}
+.toggle-switch StIcon {
+    icon-size: 0px;
+    color: transparent;
+}
+.toggle-switch .handle {
+    width: 0px;
+    height: 0px;
+    background: none;
+}
+/* =====================================
+          NOTIFICATION BANNER
+===================================== */
+.message,
+.notification-banner {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(35, 5, 15, 0.855); 
+    border: 2px solid rgba(255, 51, 85, 0.5); 
+    border-radius: 26px;
+    box-shadow: inset 0px 0px 12px 0px rgba(255, 51, 85, 0.3);
+    padding: 12px;
+}
+.message:hover, 
+.message:focus,
+.notification-banner:hover {
+    border: 2px solid rgba(255, 51, 85, 0.9);
+    box-shadow: inset 0px 0px 24px 0px rgba(255, 51, 85, 0.3); 
+}
+.notification-button {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(35, 5, 15, 0.5);
+    border: 2px solid rgba(255, 51, 85, 0.5);
+    border-radius: 30px;
+    margin: 4px;
+}
+.notification-button:focus,
+.notification-button:hover {
+    background-color: rgba(255, 51, 85, 0.6); 
+    color: rgba(255, 255, 255, 1.0);
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 12px 0px rgba(255, 51, 85, 0.8);
+}
+/* =====================================
+          SCREENSHOT PANEL
+===================================== */
+.screenshot-ui-panel,
+.screenshot-ui-menu {
+  background-color: rgba(40, 5, 15, 0.8);
+  border-radius: 30px; 
+  border: 2px solid rgba(255, 51, 85, 0.5);
+}
+.screenshot-ui-panel StButton,
+.screenshot-ui-panel .button,
+.screenshot-ui-type-button,
+.screenshot-ui-capture-button {
+  background-color: rgba(80, 10, 30, 0.4); 
+  color: rgba(255, 255, 255, 1.0);
+  border-radius: 30px;
+  border: 2px solid rgba(255, 51, 85, 0.3);   
+}
+.screenshot-ui-panel StButton:hover,
+.screenshot-ui-panel .button:hover,
+.screenshot-ui-type-button:hover,
+.screenshot-ui-capture-button:hover {
+  background-color: rgba(255, 51, 85, 0.25); 
+  border-color: rgba(255, 51, 85, 1.0); 
+  color: rgba(255, 255, 255, 1.0);
+}
+.screenshot-ui-panel StButton:checked,
+.screenshot-ui-panel .button:checked,
+.screenshot-ui-type-button:checked,
+.screenshot-ui-capture-button:checked,
+.screenshot-ui-panel StButton:active {
+  background-color: rgba(255, 51, 85, 0.9); 
+  color: rgba(255, 255, 255, 1.0);
+  border: 2px solid rgba(255, 100, 120, 1.0);
+  border-radius: 30px;
+}
+/* =====================================
+              ALT+F2
+===================================== */
+.run-dialog .run-dialog-entry,
+.run-dialog .st-entry,
+.run-dialog .search-entry, 
+.run-dialog StEntry {
+    color: #ff3355 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-image: none !important;
+    border: 1px solid rgba(255, 51, 85, 0.4) !important;
+    padding: 6px 12px !important;
+    border-radius: 24px !important;
+    box-shadow: none !important;
+}
+/* =====================================
+                OSD
+===================================== */
+.osd-window {
+    background-color: rgba(35, 5, 15, 0.7);
+    border-radius: 24px;
+    border: 2px solid rgba(255, 51, 85, 0.5);
+}
+.osd-window .level {
+    -barlevel-active-background-color: rgba(255, 51, 85, 1.0); 
+    -barlevel-background-color: rgba(255, 51, 85, 0.15); 
+    color: rgba(255, 51, 85, 1.0);    
+    opacity: 1.0; 
+    height: 12px;
+    max-height: 32px;
+}
+.osd-window StIcon {
+    filter: drop-shadow(0 0 8px rgba(255, 51, 85, 0.5));
+    height: 12px;
+    max-height: 32px;
+}

@@ -1,0 +1,105 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[░▒▓](#7d001e)\
+$os\
+[](bg:#c81e3c fg:#7d001e)\
+$directory\
+[](fg:#c81e3c bg:#402e34)\
+$git_branch\
+$git_status\
+[](fg:#402e34 bg:#2d0a14)\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$php\
+[](fg:#2d0a14 bg:#16000a)\
+$time\
+[ ](fg:#16000a)\
+\n$character"""
+
+[directory]
+style = "fg:#ffffff bg:#c81e3c"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#402e34"
+format = '[[ $symbol $branch ](fg:#ff3355 bg:#402e34)]($style)'
+
+[git_status]
+style = "bg:#402e34"
+format = '[[($all_status$ahead_behind )](fg:#ff3355 bg:#402e34)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#2d0a14"
+format = '[[ $symbol ($version) ](fg:#ff2850 bg:#2d0a14)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#2d0a14"
+format = '[[ $symbol ($version) ](fg:#ff2850 bg:#2d0a14)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#2d0a14"
+format = '[[ $symbol ($version) ](fg:#ff2850 bg:#2d0a14)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#2d0a14"
+format = '[[ $symbol ($version) ](fg:#ff2850 bg:#2d0a14)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#2d0a14"
+format = '[[ $symbol ($version) ](fg:#ff2850 bg:#2d0a14)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#16000a"
+format = '[[  $time ](fg:#fa5a8c bg:#16000a)]($style)'
+
+[character]
+success_symbol = "[❯](bold #ff2850)"
+error_symbol = "[❯](bold #dc1428)"
+
+[os]
+style = "bg:#7d001e fg:#ffffff"
+format = "[ $symbol ]($style)"
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "⭒₊🌑₊⭒"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
