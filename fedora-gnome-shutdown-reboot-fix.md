@@ -1,7 +1,7 @@
 # Fedora GNOME: Shutdown Triggers a Reboot Instead of Powering Off
 
 ## Problem
-Clicking **Power Off** in GNOME on Fedora didn't shut the machine down — it rebooted instead, showing my (customized) GRUB screen twice before landing back on the desktop.
+Clicking **Power Off** in GNOME on Fedora didn't shut the machine down, it rebooted instead, showing my (customized) GRUB screen twice before landing back on the desktop.
 
 ## Diagnosis
 
@@ -9,13 +9,13 @@ Clicking **Power Off** in GNOME on Fedora didn't shut the machine down — it re
 ```bash
 systemctl poweroff
 ```
-This powered off cleanly. So it wasn't an ACPI/firmware/BIOS issue — the problem was specific to how GNOME itself handles shutdown.
+This powered off cleanly. So it wasn't an ACPI/firmware/BIOS issue, the problem was specific to how GNOME itself handles shutdown.
 
 **2. Reproduced the exact code path the GUI button uses:**
 ```bash
 gnome-session-quit --power-off --no-prompt
 ```
-This also rebooted, confirming the bug was in `gnome-session`, not a misclick.
+This also rebooted, confirming the bug was in `gnome-session`.
 
 **3. Checked the previous boot's journal for what actually happened:**
 ```bash
@@ -40,16 +40,10 @@ The offline transaction ... is no longer valid.
 To clean up, run `dnf5 offline clean`.
 ```
 
-## Root Cause
-GNOME Software had a background setting enabled to pre-stage **offline updates**:
-```bash
-gsettings get org.gnome.software download-updates   # → true
-```
+## Cause
 At some point I updated the system another way (e.g. `dnf upgrade` from a terminal), which made that staged offline transaction stale/invalid.
 
-GNOME's Power Off action checks for a pending offline transaction and, instead of powering off, reboots into `system-update.target` to apply it. The stale transaction immediately failed (`dnf5-offline-transaction.service`), which triggered an `OnFailure=` cleanup that removed the `/system-update` symlink and rebooted a **second** time into a normal boot.
-
-**Result: two reboots → two GRUB screens → no actual shutdown.**
+**Result: two reboots → two GRUB screens → no shutdown.**
 
 ## Fix
 ```bash
@@ -60,10 +54,7 @@ sudo dnf5 offline clean
 sudo dnf upgrade
 ```
 
-Optional — stop GNOME Software from silently staging offline updates going forward:
-```bash
-gsettings set org.gnome.software download-updates false
-```
+
 
 ## Result
-After clearing the stale transaction, Power Off does a normal, single shutdown — no reboot, no double GRUB screen.
+After clearing the stale transaction, Power Off does a normal, single shutdown, no reboot and no double GRUB screen.
