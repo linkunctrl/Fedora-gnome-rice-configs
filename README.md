@@ -5,6 +5,7 @@ This repo consists of my customized or tweaked config files for my gnome as well
 * `~/.config/gtk-4.0/gtk.css` - tweaked gtk4 styling
 * `~/.themes/CyberDusk/gnome-shell/gnome-shell.css` - tweaked gnome-shell theme
 * `~/.config/starship.toml` - my customized starship file with a red theme
+* `~/.var/app/com.discordapp.Discord/config/Vencord/themes/2neutron.theme.css` - a discord red vencord theme (tweaked version of neutron from BD)
 * `gnome reboot on shutdown fix` 
 
 
