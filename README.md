@@ -12,3 +12,4 @@ This repo consists of my customized or tweaked config files for my gnome as well
 ### credits & notes
 
 The CyberDusk theme was created by someone else (originally in blue). I don't own any of the original code, I just edited the css files to swap the blue hues for reds.
+The neutron theme is originally from BetterDiscord. I don't own any of the original code, I just edited the css files to swap the purple hues for reds and changed the background.
